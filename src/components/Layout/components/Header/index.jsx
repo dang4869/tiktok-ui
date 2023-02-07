@@ -10,8 +10,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
-    faMessage,
     faUser,
     faCoins,
     faGear,
@@ -27,6 +25,8 @@ import { Wrapper as PopperWrapper } from '~/components/Layout/Popper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '../../Popper/Menu';
+import { UploadIcon } from '~/components/Icon';
+import Image from '~/components/Image/index';
 
 const cx = classNames.bind(styles);
 const currentUser = true;
@@ -145,7 +145,7 @@ function Header() {
                             <>
                                 <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                     <button className={cx('action-btn')}>
-                                        <FontAwesomeIcon icon={faCloudUpload} />
+                                        <UploadIcon />
                                     </button>
                                 </Tippy>
                             </>
@@ -158,10 +158,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={hanldeMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9bea2c30cf41b2cb99db73e81b62b2b8~c5_100x100.jpeg?x-expires=1675846800&x-signature=G1uxnQTD9gCJJiAHyKkdXwRFmGY%3D"
+                            <Image
+                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/9bea2c30cf41b2cb99db73e81b62b2b8~c5_100x100.jpeg?x-expires=1675846800&x-signature=G1uxnQTD9gCJJiAHyKkdXwRFmGY%3"
                                 alt="Nguyễn Văn A"
                                 className={cx('user-avatar')}
+                                fallBack
                             />
                         ) : (
                             <button className={cx('more-btn')}>
