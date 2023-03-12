@@ -25,6 +25,10 @@
     align-items: center;
 }
 
+.logo-link {
+    display: flex;
+}
+
 .search {
     width: 361px;
     height: var(--search-height);
