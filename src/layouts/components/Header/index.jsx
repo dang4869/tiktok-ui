@@ -19,9 +19,9 @@ import Button from '~/components/Button';
 import Menu from '../../Popper/Menu';
 import { UploadIcon } from '~/components/Icon';
 import Image from '~/components/Image/index';
-import Search from '~/components/Layout/components/Search/index';
+import Search from '~/layouts/components/Search/index';
 import { Link } from 'react-router-dom';
-import routersConfig from '~/config/router';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 const currentUser = true;
@@ -96,7 +96,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={routersConfig.home} className={cx('logo-link')}>
+                    <Link to={config.routers.home} className={cx('logo-link')}>
                         <img src={images.logo} alt="TikTok" />
                     </Link>
                 </div>
